@@ -1,5 +1,5 @@
 # Latencia Optimizer
-# Copyleft TheDeveloperEver ;)
+# Copyleft TheDeveloperEver
 
 import pyfiglet
 import os
