@@ -4,7 +4,7 @@
 import pyfiglet
 import os
 
-inputtitle = pyfiglet.figlet_format("Input Lag")
+inputtitle = pyfiglet.figlet_format("Input Latency")
 fpstitle = pyfiglet.figlet_format("FPS")
 nettitle = pyfiglet.figlet_format("Networking")
 
@@ -12,7 +12,7 @@ nettitle = pyfiglet.figlet_format("Networking")
 title = pyfiglet.figlet_format("Latencia")
 print(title)
 
-print("\t 1. Input Lag")
+print("\t 1. Input Latency")
 print("\t 2. FPS")
 print("\t 3. Networking")
 
