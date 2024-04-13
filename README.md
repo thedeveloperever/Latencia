@@ -1,7 +1,7 @@
 # Latencia ⏩
 A FOSS (Free and Open Source Software) Windows Optimizer written in Python. 🐍
 
-## Features (more like in progress right now)
+## Features (more like in progress)
 
 ### Input Latency
 - Disabling Extra Devices
