@@ -1,1 +1,0 @@
-python3.11 -m nuitka --onefile --standalone --follow-imports main.py -o "Latencia.exe"
