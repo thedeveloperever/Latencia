@@ -18,8 +18,6 @@ print("\t 3. Networking")
 
 titlechoice = input("Enter your choice [1, 2, 3] :: ")
 
-os.system("cls")
-
 if titlechoice == 1:
     print(inputtitle)
     print("\t 1. Disable Extra Devices")
