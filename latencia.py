@@ -11,24 +11,24 @@ print("\t 1. Input Latency")
 print("\t 2. FPS")
 print("\t 3. Networking")
 print("\t 4. General")
-titlechoice = int(input("Enter your choice [1, 2, 3, 4] :: "))
+choice = int(input("Enter your choice [1, 2, 3, 4] :: "))
 os.system("cls")
 
 if choice == 1:
     print(inputtitle)
     print("\t 1. Disable Extra Devices")
     print("\t 2. Change Win32PrioritySeparation")
-    inputchoice = int(input("Enter your choice [1, 2] :: "))
+    inchoice = int(input("Enter your choice [1, 2] :: "))
     os.system("cls")
 
-    if inputchoice == 1:
+    if inchoice == 1:
         print(inputtitle)
         os.system("sc config cdrom start=disabled")
         os.system("sc config cdfs start=disabled")
         os.system("sc config CompositeBus start=disabled")
         os.system("sc config umbus start=disabled")
 
-    if inputchoice == 2:
+    if inchoice == 2:
         print(inputtitle)
         os.system("reg add 'HKLM\SYSTEM\CurrentControlSet\Control\PriorityControl' /v 'Win32PrioritySeparation' /t REG_DWORD /d 26 ")
 
