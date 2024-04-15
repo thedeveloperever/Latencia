@@ -8,17 +8,17 @@ inputtitle = pyfiglet.figlet_format("Input Latency")
 fpstitle = pyfiglet.figlet_format("FPS")
 nettitle = pyfiglet.figlet_format("Networking")
 
+def titlescreen():
+    title = pyfiglet.figlet_format("Latencia")
+    print(title)
+    print("\t 1. Input Latency")
+    print("\t 2. FPS")
+    print("\t 3. Networking")
+    print("\t 4. General")
+    titlechoice = int(input("Enter your choice [1, 2, 3, 4] :: "))
+    os.system("cls")
 
-title = pyfiglet.figlet_format("Latencia")
-print(title)
-
-print("\t 1. Input Latency")
-print("\t 2. FPS")
-print("\t 3. Networking")
-print("\t 4. General")
-
-titlechoice = int(input("Enter your choice [1, 2, 3, 4] :: "))
-os.system("cls")
+titlescreen()
 
 if titlechoice == 1:
     print(inputtitle)
@@ -54,11 +54,15 @@ if titlechoice == 2:
         os.system("powershell Set-Service DiagTrack -StartupType Disabled")
         os.system("cls")
 
+    titlescreen()    
+
     if fpschoice == 2:
         print(fpstitle)
         os.system("powershell iwr 'https://raw.githubusercontent.com/thedeveloperever/Latencia/main/Resources/settings.reg' -o $Env:Temp\settings.reg")
         os.system("powershell reg import $Env:Temp\settings.reg")
         os.system("cls")
+    
+    titlescreen()
 
 if titlechoice == 3:
     print(nettitle)
@@ -75,6 +79,8 @@ if titlechoice == 3:
         os.system("netsh int tcp set supp congestionprovider=ctcp")
         os.system("cls")
 
+    titlescreen()
+    
     if netchoice == 2:
         print(nettitle)
         os.system("powershell Set-NetAdapterAdvancedProperty -Name 'Ethernet' -DisplayName 'Flow Control' -DisplayValue 'Disabled'")
@@ -84,6 +90,8 @@ if titlechoice == 3:
         os.system("powershell Set-NetAdapterAdvancedProperty -Name 'Ethernet' -DisplayName 'Priority & VLAN' -DisplayValue 'Priority & VLAN Enabled'")
         os.system("cls")
 
+    titlescreen()
+    
     if netchoice == 3:
         print(nettitle)
         os.system("powershell Set-NetTCPSetting -EcnCapability Enabled")
@@ -92,3 +100,5 @@ if titlechoice == 3:
         os.system("powershell Set-NetTCPSetting -InitialRtoMs 2000")
         os.system("powershell Set-NetTCPSetting -Timestamps Enabled")
         os.system("cls")
+        
+    titlescreen()
