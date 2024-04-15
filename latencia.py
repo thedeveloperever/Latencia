@@ -30,7 +30,7 @@ if choice == 1:
 
     if inchoice == 2:
         print(inputtitle)
-        os.system("reg add 'HKLM\SYSTEM\CurrentControlSet\Control\PriorityControl' /v 'Win32PrioritySeparation' /t REG_DWORD /d 26 ")
+        os.system("reg add HKLM\SYSTEM\CurrentControlSet\Control\PriorityControl /v 'Win32PrioritySeparation' /t REG_DWORD /d 26")
 
 if choice == 2:
     print(fpstitle)
