@@ -8,7 +8,7 @@ inputtitle = pyfiglet.figlet_format("Input Latency")
 fpstitle = pyfiglet.figlet_format("FPS")
 nettitle = pyfiglet.figlet_format("Networking")
 
-def titlescreen():
+def titlescreen(titlechoice):
     title = pyfiglet.figlet_format("Latencia")
     print(title)
     print("\t 1. Input Latency")
@@ -17,6 +17,7 @@ def titlescreen():
     print("\t 4. General")
     titlechoice = int(input("Enter your choice [1, 2, 3, 4] :: "))
     os.system("cls")
+    return titlechoice
 
 titlescreen()
 
