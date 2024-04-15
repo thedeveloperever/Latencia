@@ -19,6 +19,8 @@ def titlescreen():
     os.system("cls")
     return titlechoice
 
+titlechoice = titlescreen()
+
 titlescreen()
 
 if titlechoice == 1:
@@ -34,9 +36,12 @@ if titlechoice == 1:
         os.system("sc config cdfs start=disabled")
         os.system("sc config CompositeBus start=disabled")
         os.system("sc config umbus start=disabled")
+
     if inputchoice == 2:
         print(inputtitle)
         os.system("reg add 'HKLM\SYSTEM\CurrentControlSet\Control\PriorityControl' /v 'Win32PrioritySeparation' /t REG_DWORD /d 26 ")
+
+    titlescreen()
 
 if titlechoice == 2:
     print(fpstitle)
@@ -71,8 +76,6 @@ if titlechoice == 2:
         os.system("sc config LanmanWorkstation start=manual")
         os.system("cls")
 
-    titlescreen()
-
     if fpschoice == 2:
         print(fpstitle)
         os.system("powershell iwr 'https://raw.githubusercontent.com/thedeveloperever/Latencia/main/Resources/settings.reg' -o $Env:Temp\settings.reg")
@@ -96,8 +99,6 @@ if titlechoice == 3:
         os.system("netsh int tcp set supp congestionprovider=ctcp")
         os.system("cls")
 
-    titlescreen()
-    
     if netchoice == 2:
         print(nettitle)
         os.system("powershell Set-NetAdapterAdvancedProperty -Name 'Ethernet' -DisplayName 'Flow Control' -DisplayValue 'Disabled'")
@@ -107,8 +108,6 @@ if titlechoice == 3:
         os.system("powershell Set-NetAdapterAdvancedProperty -Name 'Ethernet' -DisplayName 'Priority & VLAN' -DisplayValue 'Priority & VLAN Enabled'")
         os.system("cls")
 
-    titlescreen()
-    
     if netchoice == 3:
         print(nettitle)
         os.system("powershell Set-NetTCPSetting -EcnCapability Enabled")
