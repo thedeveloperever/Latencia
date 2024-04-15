@@ -83,7 +83,7 @@ if choice == 3:
     print("\t 1. Optimize NETSH Settings")
     print("\t 2. Optimize Ethernet Settings")
     print("\t 3. Optimize TCP Settings")
-    netchoice = int(input("Enter your choice [1, 2] :: "))
+    netchoice = int(input("Enter your choice [1, 2, 3] :: "))
     os.system("cls")
 
     if netchoice == 1:
@@ -110,5 +110,3 @@ if choice == 3:
         os.system("powershell Set-NetTCPSetting -InitialRtoMs 2000")
         os.system("powershell Set-NetTCPSetting -Timestamps Enabled")
         os.system("cls")
-
-titlescreen()
