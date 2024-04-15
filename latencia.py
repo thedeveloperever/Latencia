@@ -19,11 +19,9 @@ def titlescreen():
     os.system("cls")
     return titlechoice
 
-titlechoice = titlescreen()
+choice = titlescreen()
 
-titlescreen()
-
-if titlechoice == 1:
+if choice == 1:
     print(inputtitle)
     print("\t 1. Disable Extra Devices")
     print("\t 2. Change Win32PrioritySeparation")
@@ -41,9 +39,7 @@ if titlechoice == 1:
         print(inputtitle)
         os.system("reg add 'HKLM\SYSTEM\CurrentControlSet\Control\PriorityControl' /v 'Win32PrioritySeparation' /t REG_DWORD /d 26 ")
 
-    titlescreen()
-
-if titlechoice == 2:
+if choice == 2:
     print(fpstitle)
     print("\t 1. Disable Extra Services")
     print("\t 2. Optimize Windows Settings")
@@ -81,10 +77,8 @@ if titlechoice == 2:
         os.system("powershell iwr 'https://raw.githubusercontent.com/thedeveloperever/Latencia/main/Resources/settings.reg' -o $Env:Temp\settings.reg")
         os.system("powershell reg import $Env:Temp\settings.reg")
         os.system("cls")
-    
-    titlescreen()
 
-if titlechoice == 3:
+if choice == 3:
     print(nettitle)
     print("\t 1. Optimize NETSH Settings")
     print("\t 2. Optimize Ethernet Settings")
@@ -117,4 +111,4 @@ if titlechoice == 3:
         os.system("powershell Set-NetTCPSetting -Timestamps Enabled")
         os.system("cls")
 
-    titlescreen()
+titlescreen()
