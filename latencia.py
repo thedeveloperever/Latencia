@@ -8,7 +8,7 @@ inputtitle = pyfiglet.figlet_format("Input Latency")
 fpstitle = pyfiglet.figlet_format("FPS")
 nettitle = pyfiglet.figlet_format("Networking")
 
-def titlescreen(titlechoice):
+def titlescreen():
     title = pyfiglet.figlet_format("Latencia")
     print(title)
     print("\t 1. Input Latency")
@@ -19,7 +19,7 @@ def titlescreen(titlechoice):
     os.system("cls")
     return titlechoice
 
-titlescreen(titlechoice)
+titlescreen()
 
 if titlechoice == 1:
     print(inputtitle)
@@ -71,7 +71,7 @@ if titlechoice == 2:
         os.system("sc config LanmanWorkstation start=manual")
         os.system("cls")
 
-    titlescreen(titlechoice)
+    titlescreen()
 
     if fpschoice == 2:
         print(fpstitle)
@@ -79,7 +79,7 @@ if titlechoice == 2:
         os.system("powershell reg import $Env:Temp\settings.reg")
         os.system("cls")
     
-    titlescreen(titlechoice)
+    titlescreen()
 
 if titlechoice == 3:
     print(nettitle)
@@ -96,7 +96,7 @@ if titlechoice == 3:
         os.system("netsh int tcp set supp congestionprovider=ctcp")
         os.system("cls")
 
-    titlescreen(titlechoice)
+    titlescreen()
     
     if netchoice == 2:
         print(nettitle)
@@ -107,7 +107,7 @@ if titlechoice == 3:
         os.system("powershell Set-NetAdapterAdvancedProperty -Name 'Ethernet' -DisplayName 'Priority & VLAN' -DisplayValue 'Priority & VLAN Enabled'")
         os.system("cls")
 
-    titlescreen(titlechoice)
+    titlescreen()
     
     if netchoice == 3:
         print(nettitle)
@@ -118,4 +118,4 @@ if titlechoice == 3:
         os.system("powershell Set-NetTCPSetting -Timestamps Enabled")
         os.system("cls")
 
-    titlescreen(titlechoice)
+    titlescreen()
