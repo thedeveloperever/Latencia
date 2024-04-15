@@ -35,7 +35,7 @@ if titlechoice == 1:
         os.system("sc config umbus start=disabled")
     if inputchoice == 2:
         print(inputtitle)
-        os.system("reg add 'HKLM\SYSTEM\CurrentControlSet\Control\PriorityControl' /v 'Win32PrioritySeparation' /t REG_DWORD /d "26" ")
+        os.system("reg add 'HKLM\SYSTEM\CurrentControlSet\Control\PriorityControl' /v 'Win32PrioritySeparation' /t REG_DWORD /d 26 ")
 
 if titlechoice == 2:
     print(fpstitle)
