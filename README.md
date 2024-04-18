@@ -16,9 +16,9 @@ A FOSS Windows Optimizer written in Python. 🐍
 ### Networking
 - Change NETSH settings
 - Optimize Ethernet Adapter Settings
-- Optimize TCP SettingsZ
+- Optimize TCP Settings
 
-## Compiling
+# Compiling
 
 - You need Python 3.11
 - You also need to install pyfiglet
