@@ -1,4 +1,4 @@
-## Latencia ⏩
+# Latencia ⏩
 A FOSS Windows Optimizer written in Python. 🐍
 
 ## Features (In Progress)
