@@ -24,7 +24,7 @@ A FOSS Windows Optimizer written in Python. 🐍
 - You also need to install pyfiglet
 
 ```
-python -m pip install pyfiglet
+python -m pip install pyfiglet nuitka
 ```
 
 ```
