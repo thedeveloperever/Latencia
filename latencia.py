@@ -108,11 +108,10 @@ if choice == 3:
 if choice == 4:
     print(gentitle)
     print("\t 1. Custom Power Plan")
-    print("\t 2. Change Win32PrioritySeparation")
-    inchoice = int(input("Enter your choice [1, 2] :: "))
+    genchoice = int(input("Enter your choice [1] :: "))
     os.system("cls")
 
-    if inchoice == 1:
+    if genchoice == 1:
         print(gentitle)
         os.system("powershell iwr https://github.com/thedeveloperever/Latencia/raw/main/Resources/Latencia.pow -O $Env:Temp\Downloads\Latencia.pow")
         os.system("powershell powercfg /import $Env:Temp\Downloads\Latencia.pow 44444444-4444-4444-4444-444444444444")
