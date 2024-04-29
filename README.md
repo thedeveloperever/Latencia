@@ -4,24 +4,28 @@ A FOSS Windows Optimizer written in Python. 🐍
 ## Features (In Progress)
 
 ### Input Latency
-- Disabling Extra Devices
-- Changing Win32PrioritySeparation
+
+- Disable Extra Devices
+- Change Win32PrioritySeparation
 - Disable Mouse Acceleration
 
 ### FPS
-- Optimize Windows Settings
-- Disabling Extra Services
-- Disable Windows Defender
+
+- Disable Extra Services
+- Change Windows Settings
 
 ### Networking
+
 - Change NETSH settings
-- Optimize Ethernet Adapter Settings
-- Optimize TCP Settings
+- Change Ethernet Adapter Settings
+- Change TCP Settings
 
 # Compiling
 
-- You need Python 3.11
-- You also need to install pyfiglet
+### Requirements
+
+- Python 3.11
+- pyfiglet and nuitka
 
 ```
 python -m pip install pyfiglet nuitka
