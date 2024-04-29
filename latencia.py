@@ -4,6 +4,7 @@ import os
 inputtitle = pyfiglet.figlet_format("Input Latency")
 fpstitle = pyfiglet.figlet_format("FPS")
 nettitle = pyfiglet.figlet_format("Networking")
+gentitle = pyfiglet.figlet_format("General")
 title = pyfiglet.figlet_format("Latencia")
 
 print(title)
@@ -30,7 +31,7 @@ if choice == 1:
 
     if inchoice == 2:
         print(inputtitle)
-        os.system("reg add HKLM\SYSTEM\CurrentControlSet\Control\PriorityControl /v 'Win32PrioritySeparation' /t REG_DWORD /d 26")
+        os.system("reg add HKLM\SYSTEM\CurrentControlSet\Control\PriorityControl /v Win32PrioritySeparation /t REG_DWORD /d 26")
 
 if choice == 2:
     print(fpstitle)
@@ -103,3 +104,16 @@ if choice == 3:
         os.system("powershell Set-NetTCPSetting -InitialRtoMs 2000")
         os.system("powershell Set-NetTCPSetting -Timestamps Enabled")
         os.system("cls")
+
+if choice == 4:
+    print(gentitle)
+    print("\t 1. Custom Power Plan")
+    print("\t 2. Change Win32PrioritySeparation")
+    inchoice = int(input("Enter your choice [1, 2] :: "))
+    os.system("cls")
+
+    if inchoice == 1:
+        print(gentitle)
+        os.system("powershell iwr https://github.com/thedeveloperever/Latencia/raw/main/Resources/Latencia.pow -O $Env:Temp\Downloads\Latencia.pow")
+        os.system("powershell powercfg /import $Env:Temp\Downloads\Latencia.pow 44444444-4444-4444-4444-444444444444")
+        os.system("powershell powercfg /setactive 44444444-4444-4444-4444-444444444444")
