@@ -28,16 +28,19 @@ if choice == 1:
         os.system("sc config cdfs start=disabled")
         os.system("sc config CompositeBus start=disabled")
         os.system("sc config umbus start=disabled")
+        os.system("cls")
 
     if inchoice == 2:
         print(inputtitle)
         os.system("reg add HKLM\SYSTEM\CurrentControlSet\Control\PriorityControl /v Win32PrioritySeparation /t REG_DWORD /d 26")
+        os.system("cls")
 
 if choice == 2:
     print(fpstitle)
     print("\t 1. Disable Extra Services")
     print("\t 2. Optimize Windows Settings")
-    fpschoice = int(input("Enter your choice [1, 2] :: "))
+    print("\t 3. Disable Defender")
+    fpschoice = int(input("Enter your choice [1, 2, 3] :: "))
     os.system("cls")
 
     if fpschoice == 1:
@@ -70,6 +73,18 @@ if choice == 2:
         print(fpstitle)
         os.system("powershell iwr 'https://raw.githubusercontent.com/thedeveloperever/Latencia/main/Resources/settings.reg' -o $Env:Temp\settings.reg")
         os.system("powershell reg import $Env:Temp\settings.reg")
+        os.system("cls")
+
+    if fpschoice == 3:
+        print(fpstitle)
+        os.system('reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender" /v DisableAntiSpyware /t REG_DWORD /d 1')
+        os.system('reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender" /v DisableRoutinelyTakingAction /t REG_DWORD /d 1')
+        os.system('reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender" /v ServiceKeepAlive /t REG_DWORD /d 0')
+        os.system('reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection" /v DisableBehaviorMonitoring /t REG_DWORD /d 1')
+        os.system('reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection" /v DisableIOAVProtection /t REG_DWORD /d 1')
+        os.system('reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection" /v DisableOnAccessProtection     /t REG_DWORD /d 1')
+        os.system('reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection" /v DisableRealtimeMonitoring /t REG_DWORD /d 1')
+        os.system('reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Reporting" /v DisableEnhancedNotifications /t REG_DWORD /d 1')
         os.system("cls")
 
 if choice == 3:
@@ -108,7 +123,8 @@ if choice == 3:
 if choice == 4:
     print(gentitle)
     print("\t 1. Custom Power Plan")
-    genchoice = int(input("Enter your choice [1] :: "))
+    print("\t 2. Disable Mitigrations")
+    genchoice = int(input("Enter your choice [1, 2] :: "))
     os.system("cls")
 
     if genchoice == 1:
@@ -116,3 +132,14 @@ if choice == 4:
         os.system("powershell iwr https://github.com/thedeveloperever/Latencia/raw/main/Resources/Latencia.pow -O $Env:Temp\Downloads\Latencia.pow")
         os.system("powershell powercfg /import $Env:Temp\Downloads\Latencia.pow 44444444-4444-4444-4444-444444444444")
         os.system("powershell powercfg /setactive 44444444-4444-4444-4444-444444444444")
+        os.system("cls")
+
+    if genchoice == 2:
+        print(gentitle)
+        os.system('reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager" /v ProtectionMode /t REG_DWORD /d 0')
+        os.system('reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v FeatureSettings /t REG_DWORD /d 1')
+        os.system('reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v FeatureSettingsOverride /t REG_DWORD /d 3')
+        os.system('reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v FeatureSettingsOverrideMask /t REG_DWORD /d 3')
+        os.system('reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v EnableCfg /t REG_DWORD /d 0')
+        os.system('reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v DisablePagingExecutive /t REG_DWORD /d 1')
+        os.system("cls")
