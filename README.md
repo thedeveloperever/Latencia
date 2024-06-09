@@ -28,11 +28,8 @@ A FOSS Windows Optimizer written in Python. 🐍
 - pyfiglet and nuitka
 
 ```
-python -m pip install pyfiglet nuitka
-```
-
-```
 git clone https://github.com/thedeveloperever/Latencia.git
 cd Latencia
+python -m pip install pyfiglet nuitka
 .\build.bat
 ```
