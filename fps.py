@@ -12,7 +12,7 @@ os.system("cls")
 
 
 if choice == 1:
-    print(fpstitle)
+    print(pyfiglet.figlet_format("FPS"))
     os.system("sc config AxInstSV start=manual")
     os.system("sc config tzautoupdate start=manual")
     os.system("sc config dmwappushservice start=manual")
@@ -38,13 +38,13 @@ if choice == 1:
     os.system("cls")
 
 if choice == 2:
-    print(fpstitle)
+    print(pyfiglet.figlet_format("FPS"))
     os.system("powershell iwr 'https://raw.githubusercontent.com/thedeveloperever/Latencia/main/Resources/settings.reg' -o $Env:Temp\settings.reg")
     os.system("powershell reg import $Env:Temp\settings.reg")
     os.system("cls")
 
 if choice == 3:
-    print(fpstitle)
+    print(pyfiglet.figlet_format("FPS"))
     os.system('reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender" /v DisableAntiSpyware /t REG_DWORD /d 1')
     os.system('reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender" /v DisableRoutinelyTakingAction /t REG_DWORD /d 1')
     os.system('reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender" /v ServiceKeepAlive /t REG_DWORD /d 0')
