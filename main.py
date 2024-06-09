@@ -1,9 +1,9 @@
 import pyfiglet
 import os
 
-import latency.py
-import fps.py
-import networking.py
+import latency
+import fps
+import networking
 
 title = pyfiglet.figlet_format("Latencia")
 
