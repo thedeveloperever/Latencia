@@ -6,13 +6,14 @@ A FOSS Windows Optimizer written in Python. 🐍
 ### Input Latency
 
 - Disable Extra Devices
-- Change Win32PrioritySeparation
-- Disable Mouse Acceleration
+- Change Win32PrioritySeparation to 26
+- Change to Custom Power Plan
 
 ### FPS
 
 - Disable Extra Services
-- Change Windows Settings
+- Disable Defender
+- Change Microsoft Settings
 
 ### Networking
 
