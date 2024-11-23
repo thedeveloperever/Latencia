@@ -12,14 +12,19 @@ def menu():
 
     if choice == 1:
         latency()
+
     if choice == 2:
         fps()
+
     if choice == 3:
         networking()
+
     if choice == 4:
         os._exit()
+
     if choice != 1 and choice != 2 and choice !=3 and choice !=4:
         print("\t Invalid Choice")
+        os.system("cls")
         menu()
 
 def latency():
@@ -32,7 +37,7 @@ def latency():
     os.system("cls")
 
     if choice == 1:
-        print(inputtitle)
+        print(pyfiglet.figlet_format("Latency"))
         os.system("sc config cdrom start=disabled")
         os.system("sc config cdfs start=disabled")
         os.system("sc config CompositeBus start=disabled")
@@ -41,22 +46,26 @@ def latency():
         latency()
 
     if choice == 2:
-        print(inputtitle)
+        print(pyfiglet.figlet_format("Latency"))
         os.system("reg add HKLM\SYSTEM\CurrentControlSet\Control\PriorityControl /v Win32PrioritySeparation /t REG_DWORD /d 2A")
         os.system("cls")
         latency()
 
     if choice == 3:
-        print(inputtitle)
+        print(pyfiglet.figlet_format("Latency"))
         os.system("powershell iwr 'https://raw.githubusercontent.com/thedeveloperever/Latencia/main/Resources/Latencia.pow' -o $Env:Temp\Latencia.pow")
         os.system("powershell powercfg /import $Env:Temp\Latencia.pow 44444444-4444-4444-4444-444444444444 ")
+        os.system("cls")
         latency()
 
     if choice == 4:
+        os.system("cls")
         menu()
 
     if choice != 1 and choice != 2 and choice !=3 and choice !=4:
+        print(pyfiglet.figlet_format("Latency"))
         print("\t Invalid Choice")
+        os.system("cls")
         menu()
 
 def fps():
@@ -71,34 +80,35 @@ def fps():
 
     if choice == 1:
         print(pyfiglet.figlet_format("FPS"))
-        os.system("sc config AxInstSV start=manual")
-        os.system("sc config tzautoupdate start=manual")
-        os.system("sc config dmwappushservice start=manual")
-        os.system("sc config MapsBroker start=manual")
-        os.system("sc config SharedAccess start=manual")
-        os.system("sc config NetTcpPortSharing start=manual")
-        os.system("sc config Spooler start=manual")
-        os.system("sc config PrintNotify start=manual")
-        os.system("sc config RmSvc start=manual")
-        os.system("sc config RemoteAccess start=manual")
-        os.system("sc config SCardSvr start=manual")
-        os.system("sc config UserDataSvc start=manual")
-        os.system("sc config WalletService start=manual")
-        os.system("sc config WSearch start=manual")
-        os.system("sc config DiagTrack start=manual")
-        os.system("sc config RasMan start=manual")
-        os.system("sc config SstpSvc start=manual")
-        os.system("sc config DPS start=manual")
-        os.system("sc config Spooler start=manual")
-        os.system("sc config rdbss start=manual")
-        os.system("sc config KSecPkg start=manual")
-        os.system("sc config LanmanWorkstation start=manual")
+        os.system("sc config AxInstSV start=demand")
+        os.system("sc config tzautoupdate start=demand")
+        os.system("sc config dmwappushservice start=demand")
+        os.system("sc config MapsBroker start=demand")
+        os.system("sc config SharedAccess start=demand")
+        os.system("sc config NetTcpPortSharing start=demand")
+        os.system("sc config Spooler start=demand")
+        os.system("sc config PrintNotify start=demand")
+        os.system("sc config RmSvc start=demand")
+        os.system("sc config RemoteAccess start=demand")
+        os.system("sc config SCardSvr start=demand")
+        os.system("sc config UserDataSvc start=demand")
+        os.system("sc config WalletService start=demand")
+        os.system("sc config WSearch start=demand")
+        os.system("sc config DiagTrack start=demand")
+        os.system("sc config RasMan start=demand")
+        os.system("sc config SstpSvc start=demand")
+        os.system("sc config DPS start=demand")
+        os.system("sc config Spooler start=demand")
+        os.system("sc config rdbss start=demand")
+        os.system("sc config KSecPkg start=demand")
+        os.system("sc config LanmanServer start=demand")
+        os.system("sc config LanmanWorkstation start=demand")
         os.system("cls")
         fps()
 
     if choice == 2:
         print(pyfiglet.figlet_format("FPS"))
-        os.system("powershell iwr 'https://raw.githubusercontent.com/thedeveloperever/Latencia/main/Resources/settings.reg' -o $Env:Temp\settings.reg")
+        os.system("powershell iwr 'https://raw.githubusercontent.com/thedeveloperever/Latencia/refs/heads/main/Resources/settings.reg' -o $Env:Temp\settings.reg")
         os.system("powershell reg import $Env:Temp\settings.reg")
         os.system("cls")
         fps()
@@ -117,10 +127,13 @@ def fps():
         fps()
 
     if choice == 4:
+        os.system("cls")
         menu()
 
     if choice != 1 and choice != 2 and choice !=3 and choice !=4:
+        print(pyfiglet.figlet_format("FPS"))
         print("\t Invalid Choice")
+        os.system("cls")
         menu()
 
 def networking():
@@ -135,17 +148,14 @@ def networking():
     if choice == 1:
         print(pyfiglet.figlet_format("Networking"))
         os.system("netsh int tcp set global autotuninglevel=disabled")
-        os.system("netsh int tcp set heuristics disabled disabled")
-        os.system("netsh int tcp set supp congestionprovider=ctcp")
+        os.system("netsh int tcp set heuristics disabled")
+        os.system("netsh int tcp set supp internet congestionprovider=ctcp")
         os.system("cls")
         networking()
 
     if choice == 2:
         print(pyfiglet.figlet_format("Networking"))
         os.system("powershell Set-NetAdapterAdvancedProperty -Name 'Ethernet' -DisplayName 'Flow Control' -DisplayValue 'Disabled'")
-        os.system("powershell Set-NetAdapterAdvancedProperty -Name 'Ethernet' -DisplayName 'Interrupt Moderation' -DisplayValue 'Disabled'")
-        os.system("powershell Set-NetAdapterAdvancedProperty -Name 'Ethernet' -DisplayName 'Large Send Offload v2 (IPv4)' -DisplayValue 'Disabled'")
-        os.system("powershell Set-NetAdapterAdvancedProperty -Name 'Ethernet' -DisplayName 'Large Send Offload v2 (IPv6)' -DisplayValue 'Disabled'")
         os.system("powershell Set-NetAdapterAdvancedProperty -Name 'Ethernet' -DisplayName 'Priority & VLAN' -DisplayValue 'Priority & VLAN Enabled'")
         os.system("cls")
         networking()
@@ -154,17 +164,19 @@ def networking():
         print(pyfiglet.figlet_format("Networking"))
         os.system("powershell Set-NetTCPSetting -EcnCapability Enabled")
         os.system("powershell Set-NetTCPSetting -MaxSynRetransmissions 2")
-        os.system("powershell Set-NetTCPSetting -MinRtoMs 300")
         os.system("powershell Set-NetTCPSetting -InitialRtoMs 2000")
         os.system("powershell Set-NetTCPSetting -Timestamps Enabled")
         os.system("cls")
         networking()
 
     if choice == 4:
+        os.system("cls")
         menu()
 
     if choice != 1 and choice != 2 and choice !=3 and choice !=4:
+        print(pyfiglet.figlet_format("Networking"))
         print("\t Invalid Choice")
+        os.system("cls")
         menu()
 
 menu()
