@@ -1,2 +1,2 @@
 @echo off
-python -m nuitka --onefile --standalone --follow-imports main.py -o "Latencia.exe"
+python -m nuitka --onefile --standalone main.py -o "Latencia.exe"
